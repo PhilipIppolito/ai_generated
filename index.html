@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>AI Generated Webpages</title>
+	<style>
+		body {
+			background-color: #222;
+			color: #fff;
+			font-family: Arial, sans-serif;
+			margin: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+		}
+		h1 {
+			color: #fff;
+			text-align: center;
+			font-size: 36px;
+			margin-top: 50px;
+			margin-bottom: 30px;
+		}
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			margin: 0 auto;
+			max-width: 800px;
+			padding: 0 20px;
+		}
+		.box {
+			background-color: #444;
+			border: none;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+			padding: 30px;
+			margin: 20px;
+			max-width: 400px;
+			min-width: 300px;
+			text-align: center;
+			transition: all 0.3s ease;
+		}
+		.box:hover {
+			transform: translateY(-10px);
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+		}
+		.box h2 {
+			margin-top: 0;
+			margin-bottom: 20px;
+			font-size: 24px;
+		}
+		.box a {
+			color: #fff;
+			text-decoration: none;
+			font-size: 18px;
+			transition: all 0.3s ease;
+		}
+		.box:hover a {
+			color: #fc8d62;
+		}
+		.disclaimer {
+			margin-top: 50px;
+			font-size: 14px;
+			text-align: center;
+		}
+		.disclaimer a {
+			color: #fc8d62;
+			text-decoration: none;
+			transition: all 0.3s ease;
+		}
+		.disclaimer a:hover {
+			color: #fff;
+		}
+		@media screen and (max-width: 600px) {
+			.box {
+				max-width: 100%;
+				min-width: auto;
+			}
+		}
+	</style>
+</head>
+<body>
+	<h1>AI Generated Webpages</h1>
+	<div class="container">
+		<div class="box">
+			<h2>To-Do List</h2>
+			<a href="to-do_list/index.html">Link</a>
+		</div>
+		<div class="box">
+			<h2>Number Guessing Game</h2>
+			<a href="random_number_gessing_game/index.html">Link</a>
+		</div>
+        <div class="box">
+            <h2>Hello World!</h2>
+			<a href="#">This is a link!</a>
+        </div>
+        <div class="box">
+            <h2>Hello World!</h2>
+			<a href="#">This is a link!</a>
+        </div>
+	</div>
+	<div class="disclaimer">
+		<p>Disclaimer: All content on this page and the linked pages has been generated with AI.</p>
+		<p><a href="https://openai.com/">Learn more about AI-generated content.</a></p>
+	</div>
+</body>
+</html>
