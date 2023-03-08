@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Clicker Game</title>
+	<style>
+		body {
+			text-align: center;
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+			color: #333;
+			transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		}
+
+		body.dark-mode {
+			background-color: #333;
+			color: #f2f2f2;
+		}
+
+		h1 {
+			margin-top: 50px;
+			color: #4CAF50;
+		}
+
+		.button {
+			font-size: 24px;
+			padding: 10px 20px;
+			margin: 20px;
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+			transition: background-color 0.2s ease-in-out;
+		}
+
+		.button:hover {
+			background-color: #388E3C;
+		}
+
+		.points {
+			font-size: 48px;
+			margin-top: 50px;
+			color: #4CAF50;
+		}
+
+		@media screen and (max-width: 600px) {
+			.button {
+				font-size: 20px;
+				padding: 8px 16px;
+				margin: 10px;
+			}
+
+			.points {
+				font-size: 36px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<h1>Clicker Game</h1>
+	<p>Click the button to earn points!</p>
+	<p class="points">Points: <span id="points">0</span></p>
+	<button class="button" onclick="addPoints()">Click me!</button>
+
+	<button id="dark-mode-toggle" class="button">Dark mode</button>
+
+	<script>
+		let points = 0;
+		function addPoints() {
+			points += 1;
+			document.getElementById("points").innerHTML = points;
+		}
+
+		const darkModeToggle = document.getElementById('dark-mode-toggle');
+		const body = document.body;
+
+		darkModeToggle.addEventListener('click', () => {
+			body.classList.toggle('dark-mode');
+			darkModeToggle.innerHTML = body.classList.contains('dark-mode') ? 'Light mode' : 'Dark mode';
+		});
+	</script>
+</body>
+</html>
